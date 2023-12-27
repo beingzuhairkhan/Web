@@ -103,23 +103,21 @@ app.use("/" , user);
 
 
 
-// app.all("*" , (req,res,next)=>{
-//     next(new ExpressError(404 , message = "Something went wrong"));
-// });
-
-// app.use((err,req,res,next)=>{
-//     let {statusCode=500 , message= "Something went wrong"} = err;
-//     res.status(statusCode).render("error.ejs" , {message});
-    
-// });
-
-// app.get("/privacy" , (req,res)=>{
-//     res.render("../includes/privacy.ejs");
-// })
-
-app.listen(8080, ()=>{
-    console.log("Server is working");
+app.all("*" , (req,res,next)=>{
+    next(new ExpressError(404 , message = "Something went wrong"));
 });
+
+app.use((err,req,res,next)=>{
+    let {statusCode=500 , message= "Something went wrong"} = err;
+    res.status(statusCode).render("error.ejs" , {message});
+    
+});
+
+app.get("/privacy" , (req,res)=>{
+    res.render("../includes/privacy.ejs");
+})
+
+
 
 
 
