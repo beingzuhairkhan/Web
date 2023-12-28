@@ -113,9 +113,9 @@ app.use((err,req,res,next)=>{
     
 });
 
-app.get("/privacy" , (req,res)=>{
-    res.render("../includes/privacy.ejs");
-})
+app.listen(8080 , ()=>{
+    console.log("app is working");
+ });
 
 
 
