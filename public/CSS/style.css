@@ -11,6 +11,13 @@ body{
 .container{
     flex: 1;
 }
+@media screen and (max-width: 600px) {
+     .container-fluid {
+        background-color: #ebebee !important;
+        color: white;
+        text-align: center;
+    }
+}
 .navbar{
     height: 5rem;
     background-color: white;
