@@ -1,4 +1,24 @@
 <% layout("layouts/boilerplate.ejs")%>
+<style>
+  /* Example media query for the image */
+@media screen and (max-width: 600px) {
+    .show-img {
+      height: 200px; /* Adjust the height for smaller screens */
+        width: 200% !important;
+    }
+}
+
+/* Example media query for the map */
+@media screen and (max-width: 600px) {
+    #map {
+        height: 200px; /* Adjust the height for smaller screens */
+        width: 100%; /* Adjust the width for smaller screens */
+    }
+}
+#map{
+  border: 2px solid black;
+}
+
 <script>
   const mapToken = "<%= process.env.MAP_TOKEN %>";
 </script>
