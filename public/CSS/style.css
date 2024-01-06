@@ -11,7 +11,7 @@ body{
 .container{
     flex: 1;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
      .container-fluid {
         background-color: #ebebee !important;
         color: white;
