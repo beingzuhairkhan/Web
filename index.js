@@ -7,8 +7,8 @@ const ejsMate = require("ejs-mate");
 const Session = require("express-session");
 const MongoStore = require("connect-mongo");
 const flash = require("connect-flash");
-//  const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
-const dbUrl =  process.env.ATLASDB_URL;
+ //const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+  const dbUrl =  process.env.ATLASDB_URL;
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 if(process.env.NODE_ENV != "production"){
@@ -84,7 +84,8 @@ main()
 })
 
 async function main(){
-    await mongoose.connect(process.env.ATLASDB_URL );
+     await mongoose.connect(process.env.ATLASDB_URL );
+    // await mongoose.connect(MONGO_URL);
 }
 
 
@@ -113,7 +114,7 @@ app.use((err,req,res,next)=>{
     
 });
 
-app.listen(8080 , ()=>{
+ app.listen(8000 , ()=>{
     console.log("app is working");
  });
 
